@@ -1,6 +1,8 @@
 import sys, json
 import pygame
 
+from Data.iKun import IKun
+
 
 class Main:
     def __init__(self):
