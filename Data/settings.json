@@ -3,5 +3,12 @@
 "screen_height": 600,
 "bg_color_R": 255,
 "bg_color_G": 255,
-"bg_color_B": 255
+"bg_color_B": 255,
+"classic_time": 219,
+"classic_iKun_num": {
+    "easy": 120,
+    "normal": 160,
+    "hard": 190,
+    "insane": 210
+}
 }
