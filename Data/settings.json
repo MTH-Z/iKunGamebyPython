@@ -1,7 +1,7 @@
 {
 "screen_width": 800,
 "screen_height": 600,
-"bg_color_R": 230,
-"bg_color_G": 230,
-"bg_color_B": 230
+"bg_color_R": 255,
+"bg_color_G": 255,
+"bg_color_B": 255
 }
