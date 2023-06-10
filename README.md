@@ -5,3 +5,4 @@
 开始后界面会出现iKun头像并循环播放《只因你太美》，点击会发出“你干嘛~~”叫声<br>
 可通过修改Data/settings.json对游戏进行修改<br>
 注意事项：<br>
+Data/audio/bgm.wav是MP3格式改扩展名得到，音质可能略有损失
