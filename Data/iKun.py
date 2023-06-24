@@ -12,3 +12,6 @@ class IKun(Sprite):
 
         self.rect.x = 0
         self.rect.y = 0
+
+    def update(self):
+        self.rect.y += 200
