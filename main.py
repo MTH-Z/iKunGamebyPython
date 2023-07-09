@@ -1,4 +1,4 @@
-import sys, json, random
+import json, random, sys, time
 import pygame
 import pygame.mixer as mixer
 import Data.functions as functions
@@ -16,6 +16,12 @@ class Main:
         pygame.display.set_caption("iKunGame2023")
         self.iKuns = pygame.sprite.Group()
         self.temporary_iKuns = []
+
+        self.iKuns_num = 0
+        self.total_iKuns_num = self.settings["classic_iKun_num"]["insane"]
+        self.max_time = self.settings["classic_time"]
+        self.start_time = 0
+        self.game_time = 0
         
         self._first_iKuns()
 
@@ -24,9 +30,17 @@ class Main:
             self.settings = json.load(settings)
 
     def run_game(self):
+        self.start_time = time.time()
         while True:
-            self._check_events()
-            self._update_screen()
+            self.game_time = time.time() - self.start_time
+            if self.game_time < self.max_time:
+                self._check_events()
+                self._update_screen()
+                if self.iKuns_num >= self.total_iKuns_num:
+                    functions.victory()
+            else:
+                functions.defeat(self.iKuns_num)
+            functions.score_board(self.iKuns_num)
 
     def _update_screen(self):
             bg_color = (self.settings["bg_color_R"],
@@ -55,8 +69,9 @@ class Main:
                     i.kill()
                     self._new_iKun()
                     functions.classic_click()
+                    self.iKuns_num += 1
                 else:
-                    functions.defeat()
+                    functions.defeat(self.iKuns_num)
         if event.key == pygame.K_s:
             a = 1
             for i in self.iKuns:
@@ -64,8 +79,9 @@ class Main:
                     i.kill()
                     self._new_iKun()
                     functions.classic_click()
+                    self.iKuns_num += 1
                 else:
-                    functions.defeat()
+                    functions.defeat(self.iKuns_num)
         if event.key == pygame.K_d:
             a = 2
             for i in self.iKuns:
@@ -73,8 +89,9 @@ class Main:
                     i.kill()
                     self._new_iKun()
                     functions.classic_click()
+                    self.iKuns_num += 1
                 else:
-                    functions.defeat()
+                    functions.defeat(self.iKuns_num)
         if event.key == pygame.K_f:
             a = 3
             for i in self.iKuns:
@@ -82,8 +99,9 @@ class Main:
                     i.kill()
                     self._new_iKun()
                     functions.classic_click()
+                    self.iKuns_num += 1
                 else:
-                    functions.defeat()
+                    functions.defeat(self.iKuns_num)
 
     def _first_iKuns(self):
         iKun = IKun(self)
