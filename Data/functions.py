@@ -1,8 +1,15 @@
-import pygame.mixer
+from pygame.mixer import Sound
 
 
 def play_bgm():
-    pygame.mixer.init(frequency=22050, size=-16, channels=2, buffer=4096)
-    pygame.mixer.music.load('Data/audio/bgm.mp3')
-    pygame.mixer.music.set_volume(1)
-    pygame.mixer.music.play(loops=-1, start=0.0)
+    bgm = Sound('Data/audio/bgm.mp3')
+    bgm.set_volume(0.2)
+    bgm.play(loops=-1, maxtime=0, fade_ms=0)
+
+def classic_click():
+    click = Sound('Data/audio/classic_click.wav')
+    click.play(loops=0, maxtime=0, fade_ms=0)
+
+def defeat():
+    defeat = Sound('Data/audio/defeat.wav')
+    defeat.play(loops=0, maxtime=0, fade_ms=0)
