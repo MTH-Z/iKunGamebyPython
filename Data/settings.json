@@ -5,10 +5,10 @@
 "bg_color_G": 255,
 "bg_color_B": 255,
 "classic_iKun_num": {
-    "easy": 120,
-    "normal": 160,
-    "hard": 190,
-    "insane": 230
+    "easy": 100,
+    "normal": 150,
+    "hard": 200,
+    "insane": 250
 },
 "classic_time": 220
 }
