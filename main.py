@@ -17,8 +17,10 @@ class Main:
         self.iKuns = pygame.sprite.Group()
         self.temporary_iKuns = []
 
+        self.difficulty = "easy"
         self.iKuns_num = 0
-        self.total_iKuns_num = self.settings["classic_iKun_num"]["insane"]
+        self.total_iKuns_num = \
+            self.settings["classic_iKun_num"][self.difficulty]
         self.max_time = self.settings["classic_time"]
         self.start_time = 0
         self.game_time = 0
@@ -37,10 +39,10 @@ class Main:
                 self._check_events()
                 self._update_screen()
                 if self.iKuns_num >= self.total_iKuns_num:
-                    functions.victory()
+                    functions.victory(self.game_time, self.difficulty)
             else:
                 functions.defeat(self.iKuns_num)
-            functions.score_board(self.iKuns_num)
+            functions.score_board(self.iKuns_num, self.total_iKuns_num)
 
     def _update_screen(self):
             bg_color = (self.settings["bg_color_R"],
@@ -60,8 +62,10 @@ class Main:
                 self._check_keydown_events(event)
 
     def _check_keydown_events(self, event):
-        if event.key == pygame.K_q:
+        if event.key == pygame.K_ESCAPE:
             sys.exit()
+        if event.key == pygame.K_c:
+            functions.clear_score_list()
         if event.key == pygame.K_a:
             a = 0
             for i in self.iKuns:
