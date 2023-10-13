@@ -1,0 +1,14 @@
+{
+"screen_width": 800,
+"screen_height": 200,
+"bg_color_R": 255,
+"bg_color_G": 255,
+"bg_color_B": 255,
+"classic_iKun_num": {
+    "easy": 100,
+    "normal": 150,
+    "hard": 200,
+    "insane": 250
+},
+"classic_time": 220
+}
