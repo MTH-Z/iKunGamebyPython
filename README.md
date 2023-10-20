@@ -5,6 +5,7 @@ iKun必玩<br>
 ==========<br>
 运行配置:<br>
 需要pygame包，源代码直接运行需要Python环境<br>
+建议Python 3.7以上，pygame 2.1.2以上，否则可能出现难以预料的问题<br>
 ==========<br>
 修改：<br>
 小鸡图像可以通过更改Data/images/iKun.bmp文件进行更改<br>
