@@ -1,4 +1,4 @@
-# iKunGame
+# iKunGame v1.0
 iKun必玩<br>
 操作方式：使用键盘控制消去小黄鸡<br>
 自左向右对应键为: A S D F<br>
