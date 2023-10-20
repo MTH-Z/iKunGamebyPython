@@ -1,6 +1,7 @@
 # iKunGame
 iKun必玩<br>
 操作方式：使用键盘控制消去小黄鸡<br>
+自左向右对应键为: A S D F<br>
 ==========<br>
 修改：<br>
 小鸡图像可以通过更改Data/images/iKun.bmp文件进行更改<br>
