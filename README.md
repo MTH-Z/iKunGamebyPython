@@ -1,4 +1,4 @@
-# iKunGame v1.0
+# iKunGame v1.1
 iKun必玩<br>
 操作方式：使用键盘控制消去小黄鸡<br>
 自左向右对应键为: A S D F<br>
@@ -6,6 +6,10 @@ iKun必玩<br>
 运行配置:<br>
 需要pygame包，源代码直接运行需要Python环境<br>
 建议Python 3.7以上，pygame 2.1.2以上，否则可能出现难以预料的问题<br>
+==========<br>
+更新内容：<br>
+新增无尽模式玩法<br>
+重写了部分代码<br>
 ==========<br>
 修改：<br>
 小鸡图像可以通过更改Data/images/iKun.bmp文件进行更改<br>
