@@ -13,7 +13,7 @@ class Endless(Classic):
         self._load_settings()
         self.screen = pygame.display.set_mode(
             (self.settings["screen_width"], self.settings["screen_height"]))
-        pygame.display.set_caption("iKunGame2023 v1.0")
+        pygame.display.set_caption("iKunGame2023 v1.1")
 
         self.iKuns_num = 0
         self.start_time = 0
