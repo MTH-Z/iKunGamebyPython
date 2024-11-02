@@ -1,7 +1,2 @@
-# iKunGame
-iKun必玩<br>
-收录各版本iKunGame<br>
-=====<br>
-Versions:<br>
-v1.0 https://github.com/Victim-Z/iKunGame/tree/v1.0<br>
-v1.1 https://github.com/Victim-Z/iKunGame/tree/v1.1
+# iKunGame v1.1-othervisions
+iKunGame v1.1的其他版本
